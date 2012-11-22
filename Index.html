@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>CSS3 Demo</title>
+		<style type="text/css">
+		
+			#examples div {
+				padding: 50px 10px;
+				width:500px; 
+				text-align: center;
+			}
+			
+			#roundedBox 
+			{
+				border:5px solid red; 
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				/*behavior: url(PIE/PIE.htc);*/ /*IE < 7 Support*/
+			}
+			
+			.semiRoundBox_Top {
+        -webkit-border-top-left-radius: 15px;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        background-color:Blue;
+        border:1px solid Blue;
+        width: 300px;
+			}
+			
+			.semiRoundBox_Bottom 
+			{
+			    -webkit-border-bottom-right-radius: 15px;
+                -webkit-border-bottom-left-radius: 15px;
+                -moz-border-radius-bottomright: 15px;
+                -moz-border-radius-bottomleft: 15px;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                background-color:Gray;
+                width: 300px;
+      }
+				
+			#borderBox {
+				border: 0px solid #696;
+				-webkit-box-shadow: #666 5px 5px 10px;
+				-moz-box-shadow: #666 5px 5px 10px;
+				box-shadow: #666 5px 5px 10px;
+				/*zoom: 1;*/ /**/
+				/*filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=5);*/
+				/*behavior: url(PIE/PIE.htc);*/
+			}
+			
+			h2.shadowText	{
+				color:#000000;
+				text-shadow: 1px 1px 1px #a145a1;
+				height: 1em;
+				filter: Shadow(Color=#a145a1, Direction=135, Strength=1);
+			}
+			
+			#gradientBox {
+				border: 2px solid black;
+				background: #1e5799;
+				background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #7db9e8 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(100%,#7db9e8));
+				background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 50%,#7db9e8 100%); 
+				background: -o-linear-gradient(top, #1e5799 0%,#2989d8 50%,#7db9e8 100%); 
+				background: -ms-linear-gradient(top, #1e5799 0%,#2989d8 50%,#7db9e8 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1E5799', endColorstr='#7db9e8',GradientType=0 );
+				background: linear-gradient(top, #1e5799 0%,#2989d8 50%,#7db9e8 100%);
+			}
+			
+			
+		</style>
+		<!--<script type="text/javascript" src="PIE\pie.js"></script>--> <!--IE < 7 Support -->
+	</head>
+	<body>
+		<div id="examples">
+			<h2>Rounded Corners (Border Radius)</h2>
+			<div id="roundedBox">This is an example of a rounded box and it will work in CSS 3 compliant browsers.</div>
+            
+      <br /><br />
+
+      <div class="borderBox" style="padding:0px;">
+          <div class="semiRoundBox_Top">
+              <p>Top Section</p>
+          </div>
+          <div class="semiRoundBox_Bottom">
+              <p>Bottom Section</p>
+          </div>
+      </div>
+            
+      <br /><br />
+
+			<h2>Drop Shadow (Border Box)</h2>
+			<div id="borderBox">This is an example of a rounded box and it will work in CSS 3 compliant browsers.</div>
+			
+			<h2 class="shadowText">Text Shadow - Text with a small outline.</h2>
+			
+			<h2>Gradient</h2>
+			<div id="gradientBox">Supported by most browsers but IE and Opera. There is a IE filter for Linear Gradients only in IE. FF also offers a direction value.</div>
+		</div>
+	</body>
+</html>
